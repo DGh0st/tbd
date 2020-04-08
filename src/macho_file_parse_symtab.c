@@ -87,6 +87,10 @@ handle_symbol(struct tbd_create_info *__notnull const info_in,
 
     if (is_weak_symbol(n_desc) != 0) {
         predefined_type = TBD_SYMBOL_TYPE_WEAK_DEF;
+
+        if (options.ignore_weak_defs) {
+          return E_MACHO_FILE_PARSE_OK;
+        }
     }
 
     if (is_undef) {

@@ -71,6 +71,7 @@ void print_usage(void) {
     fputs("        --ignore-swift-version,    Ignore swift-version field\n", stdout);
     fputs("        --ignore-undefineds,       Ignore undefineds field\n", stdout);
     fputs("        --ignore-uuids,            Ignore uuids field\n", stdout);
+    fputs("        --ignore-weak-defs,        Ignore weak defs field\n", stdout);
 
     fputc('\n', stdout);
     fputs("General ignore options (Subset of path options):\n", stdout);

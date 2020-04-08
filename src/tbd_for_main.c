@@ -217,8 +217,11 @@ tbd_for_main_parse_option(int *const __notnull index_in,
         tbd->parse_options.ignore_undefineds = true;
         tbd->write_options.ignore_undefineds = true;
     } else if (strcmp(option, "ignore-uuids") == 0) {
-        tbd->parse_options.ignore_uuids = true;
+        //tbd->parse_options.ignore_uuids = true;
         tbd->write_options.ignore_uuids = true;
+    } else if (strcmp(option, "ignore-weak-defs") == 0) {
+        tbd->parse_options.ignore_weak_defs = true;
+        tbd->write_options.ignore_weak_defs = true;
     } else if (strcmp(option, "ignore-warnings") == 0) {
         tbd->options.ignore_warnings = true;
     } else if (strcmp(option, "ignore-wrong-filetype") == 0) {

@@ -506,6 +506,10 @@ parse_trie_node(struct tbd_create_info *__notnull const info_in,
             case EXPORT_SYMBOL_FLAGS_KIND_REGULAR:
                 if (flags & EXPORT_SYMBOL_FLAGS_WEAK_DEFINITION) {
                     predefined_type = TBD_SYMBOL_TYPE_WEAK_DEF;
+
+                    if (options.ignore_weak_defs) {
+                        return E_MACHO_FILE_PARSE_OK;
+                    }
                 }
 
                 break;

@@ -38,6 +38,7 @@ struct tbd_parse_options {
     bool ignore_targets : 1;
     bool ignore_undefineds : 1;
     bool ignore_uuids : 1;
+    bool ignore_weak_defs : 1;
 
     /*
      * Options dictating what types of symbols should also be allowed in
@@ -349,6 +350,7 @@ struct tbd_create_options {
             bool ignore_undefineds : 1;
             bool ignore_uuids : 1;
             bool ignore_unnecessary_fields : 1;
+	    bool ignore_weak_defs : 1;
             bool use_full_targets : 1;
         };
     };
